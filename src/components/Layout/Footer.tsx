@@ -15,6 +15,10 @@ const Footer = () => {
           </div>
           <div className="border-x-4 border-[var(--primary-color)] w-4 h-10"/>
       </div>
+
+      <div className="fixed bottom-0 right-0 p-5 text-lg opacity-85">
+        <div className="text-[var(--primary-color)] font-bold">Hong Wonsup</div>
+      </div>
     </div>
   )
 }
