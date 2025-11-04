@@ -5,10 +5,11 @@ import Footer from './components/Layout/Footer'
 function App() {
 
   return (
-    <div className='flex flex-col mx-0 px-0 w-screen max-w-screen select-none'>
+    <div className='flex flex-col mx-0 px-0 w-full max-w-screen select-none'>
         <Header />
         <Contents />
         <Footer />
+        
     </div>
   )
 }
