@@ -1,14 +1,14 @@
 import './App.css'
 import Header from './components/Layout/Header'
-import Navigator from './components/Layout/Navigator'
 import Contents from './components/Layout/Contents'
+import Footer from './components/Layout/Footer'
 function App() {
 
   return (
-    <div className='container flex flex-col w-[1080px] mx-auto'>
-        <Navigator />
+    <div className='flex flex-col mx-0 px-0 w-screen max-w-screen select-none'>
         <Header />
         <Contents />
+        <Footer />
     </div>
   )
 }
