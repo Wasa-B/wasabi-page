@@ -10,7 +10,7 @@ const elements = [
   "Contact",
 ]
 
-const Navigator = () => {
+const Navigator = ({handleScroll}: {handleScroll: (index: number) => void}) => {
   const [visible, setVisible] = useState(true);
   // scroll up event
   // INSERT_YOUR_CODE
@@ -31,6 +31,9 @@ const Navigator = () => {
     };
   }, []);
 
+  const handleClick = (index: number) => {
+    handleScroll(index);
+  }
   return (
     <div className={`fixed top-0 z-10 border-b w-full mx-auto p-2 bg-[#02061890] ${visible ? '' : 'translate-y-[-100%]'} transition-all duration-300 ease-out`}>
       <div className="flex justify-between px-5 py-2 items-center">
@@ -38,8 +41,8 @@ const Navigator = () => {
           <HouseIcon className="w-6 h-6"/>
         </div>
         <div className="flex gap-5 text-lg text-[var(--primary-color)]">
-          {elements.map((element) => (
-            <div key={element} className="cursor-pointer">{element}</div>
+          {elements.map((element, index) => (
+            <div key={element} className="cursor-pointer" onClick={() => handleClick(index)}>{element}</div>
           ))}
         </div>
       </div>

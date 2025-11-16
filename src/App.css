@@ -2,14 +2,16 @@
 
 body{
   font-family: 'Noto Sans KR', sans-serif;
-  background-color: #020618;
-  color: #E0E6F8;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 :root {
   --primary-color: #FF6B00;
   --secondary-color: #3E7BFA;
+  --text-color: #E0E6F8;
   --sub-font-color: #A8B0D0;
+  --background-color: #020618;
 }
 .section {
   padding: 100px 0;

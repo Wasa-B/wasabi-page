@@ -6,7 +6,11 @@ const SkillContent = ({title, text, icon}:{title:string, text:string, icon:strin
       <Iconbox icon={icon} />
       <div className="flex flex-col text-xl pl-5">
         <h3 className="text-2xl font-bold">{title}</h3>
-        <p className="text-[var(--sub-font-color)]">{text}</p>
+        <ol className="text-[var(--sub-font-color)]">
+          {text.trim().split("\n").map((line, index) => (
+            <li key={index} className="list-disc list-inside pl-4">{line}</li>
+          ))}
+        </ol>
       </div>
     </div>
   )

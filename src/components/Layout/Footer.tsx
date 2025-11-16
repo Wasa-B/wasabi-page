@@ -3,7 +3,7 @@ import { Github, MailIcon } from "lucide-react"
 
 const Footer = () => {
   return (
-    <div className="h-[400px]">
+    <div className="h-[400px] hidden xl:block">
       <div className='fixed bottom-0 left-0 px-5 flex flex-col items-center justify-center'>
           <a href="https://github.com/Wasa-B" target="_blank">
             <Github className="w-12 h-12 text-[var(--primary-color)]"/>
@@ -17,7 +17,7 @@ const Footer = () => {
       </div>
 
       <div className="fixed bottom-0 right-0 p-5 text-lg opacity-85">
-        <div className="text-[var(--primary-color)] font-bold">Hong Wonsup</div>
+        <div className="text-[var(--primary-color)] font-bold opacity-85">Hong Wonsup</div>
       </div>
     </div>
   )
