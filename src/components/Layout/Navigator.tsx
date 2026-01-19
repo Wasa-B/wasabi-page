@@ -10,7 +10,7 @@ const elements = [
   "Contact",
 ]
 
-const Navigator = ({handleScroll}: {handleScroll: (index: number) => void}) => {
+const Navigator = ({ handleScroll }: { handleScroll: (index: number) => void }) => {
   const [visible, setVisible] = useState(true);
   // scroll up event
   // INSERT_YOUR_CODE
@@ -20,7 +20,7 @@ const Navigator = ({handleScroll}: {handleScroll: (index: number) => void}) => {
       // wheel up (negative deltaY): show
       if (e.deltaY < 0) {
         setVisible(true);
-      }else{
+      } else {
         setVisible(false);
       }
     };
@@ -35,10 +35,10 @@ const Navigator = ({handleScroll}: {handleScroll: (index: number) => void}) => {
     handleScroll(index);
   }
   return (
-    <div className={`fixed top-0 z-10 border-b w-full mx-auto p-2 bg-[#02061890] ${visible ? '' : 'translate-y-[-100%]'} transition-all duration-300 ease-out`}>
+    <div className={`fixed top-0 z-10 border-b border-neutral-600 w-full mx-auto p-2 bg-[#02061890] ${visible ? '' : 'translate-y-[-100%]'} transition-all duration-300 ease-out`}>
       <div className="flex justify-between px-5 py-2 items-center">
         <div className="cursor-pointer">
-          <HouseIcon className="w-6 h-6"/>
+          <HouseIcon className="w-6 h-6" />
         </div>
         <div className="flex gap-5 text-lg text-[var(--primary-color)]">
           {elements.map((element, index) => (

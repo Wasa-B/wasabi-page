@@ -2,7 +2,7 @@ import ContentHeader from "../common/ContentHeader"
 import { aboutData } from "../../data/about"
 
 
-const AboutContent = ({title, text}:{title:string, text:string}) =>{
+const AboutContent = ({ title, text }: { title: string, text: string }) => {
 
   return (
     <div className="text-xl pb-5">
@@ -15,7 +15,7 @@ const AboutContent = ({title, text}:{title:string, text:string}) =>{
 const About = () => {
   return (
     <div>
-      <ContentHeader index={1} title="소개" />  
+      <ContentHeader index={1} title="소개" />
       <div className="flex xl:flex-row flex-col justify-center items-center">
         <div className="xl:w-3/5 w-full px-5">
           {
@@ -24,8 +24,8 @@ const About = () => {
             ))
           }
         </div>
-        <div className="xl:w-2/5 sm:w-[640px] w-full h-[400px] px-5 border border-neutral-400 rounded-30px">
-
+        <div className="xl:w-2/5 sm:w-[540px] w-full h-[500px] rounded-lg border border-neutral-400 overflow-hidden">
+          <img src="images/profile_img.png" alt="profile_img" className="w-full h-full" />
         </div>
       </div>
     </div>
