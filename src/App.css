@@ -15,7 +15,9 @@ body {
   --background-color: #22242b;
   --section-bg: radial-gradient(circle at center, #2d3039 0%, #22242b 100%);
   --nav-bg: #22242b90;
-  --icon-bg: #3e4148;
+  --icon-bg: #22242b;
+  --icon-inner-bg: #22242b;
+  --icon-shadow: inset 6px 6px 12px #18191e, inset -6px -6px 12px #2c2f38;
 }
 
 [data-theme='light'] {
@@ -26,7 +28,9 @@ body {
   --background-color: #ffffff;
   --section-bg: radial-gradient(circle at center, #ffffff 0%, #f3f4f6 100%);
   --nav-bg: #ffffff90;
-  --icon-bg: #e5e7eb;
+  --icon-bg: #ffffff;
+  --icon-inner-bg: #f3f4f6;
+  --icon-shadow: inset 4px 4px 8px #d1d5db, inset -4px -4px 8px #ffffff;
 }
 
 .section-background {
