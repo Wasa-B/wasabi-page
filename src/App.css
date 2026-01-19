@@ -12,9 +12,10 @@ body {
   --secondary-color: #3E7BFA;
   --text-color: #E0E6F8;
   --sub-font-color: #A8B0D0;
-  --background-color: #020618;
-  --section-bg: radial-gradient(circle at center, #1e293b 0%, #020618 100%);
-  --nav-bg: #02061890;
+  --background-color: #22242b;
+  --section-bg: radial-gradient(circle at center, #2d3039 0%, #22242b 100%);
+  --nav-bg: #22242b90;
+  --icon-bg: #3e4148;
 }
 
 [data-theme='light'] {
@@ -25,6 +26,7 @@ body {
   --background-color: #ffffff;
   --section-bg: radial-gradient(circle at center, #ffffff 0%, #f3f4f6 100%);
   --nav-bg: #ffffff90;
+  --icon-bg: #e5e7eb;
 }
 
 .section-background {

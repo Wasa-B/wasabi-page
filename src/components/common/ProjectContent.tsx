@@ -42,6 +42,7 @@ const ProjectContent = ({ project, img_left = true }: { project: Project, img_le
             <span key={index}>{line}<br /></span>
           ))}
         </p>
+        <p>담당 업무</p>
         <ol className="text-[var(--sub-font-color)] pb-5 select-text">
           {works.trim().split("\n").map((line, index) => (
             <li key={index} className="list-disc list-inside">{line}</li>
