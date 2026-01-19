@@ -40,7 +40,7 @@ const Navigator = ({ handleScroll }: { handleScroll: (index: number) => void }) 
   return (
     <div className={`fixed top-0 z-10 border-b border-neutral-600 w-full mx-auto p-2 bg-[var(--nav-bg)] ${visible ? '' : 'translate-y-[-100%]'} transition-all duration-300 ease-out`}>
       <div className="flex justify-between px-5 py-2 items-center">
-        <div className="cursor-pointer">
+        <div className="cursor-pointer" onClick={() => handleClick(0)} >
           <HouseIcon className="w-6 h-6" />
         </div>
         <div className="flex gap-5 text-lg text-[var(--primary-color)] items-center">
