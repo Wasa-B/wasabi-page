@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
 
-body{
+body {
   font-family: 'Noto Sans KR', sans-serif;
   background-color: var(--background-color);
   color: var(--text-color);
+  min-height: 100vh;
 }
 
 :root {
@@ -12,6 +13,7 @@ body{
   --text-color: #E0E6F8;
   --sub-font-color: #A8B0D0;
   --background-color: #020618;
+  --section-bg: radial-gradient(circle at center, #1e293b 0%, #020618 100%);
   --nav-bg: #02061890;
 }
 
@@ -21,8 +23,12 @@ body{
   --text-color: #1a1a1a;
   --sub-font-color: #4b5563;
   --background-color: #ffffff;
+  --section-bg: radial-gradient(circle at center, #ffffff 0%, #f3f4f6 100%);
   --nav-bg: #ffffff90;
 }
-.section {
-  padding: 100px 0;
+
+.section-background {
+  background: var(--section-bg);
+  border-radius: 1rem;
+  padding: 2rem;
 }

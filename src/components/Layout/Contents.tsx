@@ -22,39 +22,39 @@ const Contents = () => {
     projects: useRef<HTMLDivElement>(null),
     contact: useRef<HTMLDivElement>(null),
   }
-  
+
   const handleScroll = (index: number) => {
     const targetRef = contentRefs[Object.keys(contentRefs)[index] as keyof ContentRefs];
     if (targetRef.current) {
       targetRef.current.scrollIntoView({ block: 'start', behavior: 'smooth' });
-    }else{
+    } else {
       console.error(`Content with index ${index} not found`);
     }
   }
-  
+
   return (
     <>
-    <Navigator handleScroll={handleScroll} /> 
-    <div className='flex flex-col lg:w-[1080px] w-full mx-auto gap-20 py-20 lg:px-0 px-5'>
-      <div ref={contentRefs.intro}>
-        <Intro/>
+      <Navigator handleScroll={handleScroll} />
+      <div className='flex flex-col lg:w-[1080px] w-full mx-auto gap-20 py-20 lg:px-0 px-5'>
+        <div ref={contentRefs.intro} className='section-background'>
+          <Intro />
+        </div>
+        <div ref={contentRefs.about} className='section-background'>
+          <About />
+        </div>
+        <div ref={contentRefs.skills} className='section-background'>
+          <Skills />
+        </div>
+        <div ref={contentRefs.projects} className='section-background'>
+          <Projects />
+        </div>
+        <div ref={contentRefs.contact} className='section-background'>
+          <Contact />
+        </div>
       </div>
-      <div ref={contentRefs.about}>
-        <About/>
+      <div className='fixed left-10 top-20 hidden xl:block'>
+        <SpinGear />
       </div>
-      <div ref={contentRefs.skills}>
-        <Skills/>
-      </div>
-      <div ref={contentRefs.projects}>
-        <Projects/>
-      </div>
-      <div ref={contentRefs.contact}>
-        <Contact/>
-      </div>
-    </div>
-    <div className='fixed left-10 top-20 hidden xl:block'>
-      <SpinGear/>
-    </div>
     </>
   )
 }
