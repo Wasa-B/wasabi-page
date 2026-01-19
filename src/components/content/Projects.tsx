@@ -1,6 +1,7 @@
 import ContentHeader from "../common/ContentHeader"
 import { projectData } from "../../data/project"
 import ProjectContent from "../common/ProjectContent";
+import ScrollReveal from "../common/ScrollReveal";
 
 
 const Projects = () => {
@@ -10,7 +11,9 @@ const Projects = () => {
       <ContentHeader index={3} title="Projects" />
       <div className="flex flex-col gap-20">
         {projects.map((project, idx) => (
-          <ProjectContent key={idx} project={project} img_left={idx % 2 === 0} />
+          <ScrollReveal key={idx}>
+            <ProjectContent project={project} img_left={idx % 2 === 0} />
+          </ScrollReveal>
         ))}
       </div>
     </div>
