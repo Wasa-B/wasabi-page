@@ -12,6 +12,16 @@ body{
   --text-color: #E0E6F8;
   --sub-font-color: #A8B0D0;
   --background-color: #020618;
+  --nav-bg: #02061890;
+}
+
+[data-theme='light'] {
+  --primary-color: #FF6B00;
+  --secondary-color: #3E7BFA;
+  --text-color: #1a1a1a;
+  --sub-font-color: #4b5563;
+  --background-color: #ffffff;
+  --nav-bg: #ffffff90;
 }
 .section {
   padding: 100px 0;
