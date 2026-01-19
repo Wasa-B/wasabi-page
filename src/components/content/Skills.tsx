@@ -13,20 +13,24 @@ const SkillOverView = () => {
     <div>
       {
         skillCategory.map((key) => {
-          if(key === "overview") return null;
-          return(
+          if (key === "overview") return null;
+          return (
             <div key={key}>
-            <h3 className="text-xl pb-2">{key}</h3>
-            <div className="flex pb-5 flex-wrap">
-              {
-                skills[key as keyof typeof skills]&&skills[key as keyof typeof skills].map((skill) => (
-                  <div key={skill.title} className="p-2">
-                    <Iconbox icon={skill.icon} />
-                  </div>
-                ))
-              }
+              <h3 className="text-xl pb-2">{key}</h3>
+              <div className="flex pb-5 flex-wrap">
+                {
+                  skills[key as keyof typeof skills] && skills[key as keyof typeof skills].map((skill, i) => (
+                    <div
+                      key={skill.title}
+                      className="p-2 animate-fade-in-up"
+                      style={{ animationDelay: `${i * 0.05}s` }}
+                    >
+                      <Iconbox icon={skill.icon} />
+                    </div>
+                  ))
+                }
+              </div>
             </div>
-          </div>
           )
         })
       }
@@ -43,39 +47,45 @@ const Skills = () => {
       <div className="flex xl:flex-row flex-col">
         <div className="skill-nav w-1/7 xl:block hidden">
           <div className="flex flex-col gap-3 pl-5 relative">
-            {skillCategory.map((key,idx) => (
+            {skillCategory.map((key, idx) => (
               <div key={key} className="cursor-pointer" onClick={() => setIndex(idx)}>
                 <h3 className={`text-lg font-light ${index === idx ? "text-[var(--primary-color)]" : "text-[var(--sub-font-color)]"}`}>{key}</h3>
               </div>
             ))}
             <div className="absolute top-0 left-0 h-full w-[2px] bg-[var(--sub-font-color)]" />
             <div className={`absolute top-0 left-0 w-[2px] bg-[var(--primary-color)] transition-all duration-400 ease-out`}
-            style={{transform: `translateY(${index * 100}%)`, height: `calc(1/${skillCategoryLength} * 100%)`}}
+              style={{ transform: `translateY(${index * 100}%)`, height: `calc(1/${skillCategoryLength} * 100%)` }}
             />
           </div>
         </div>
         <div className="skill-nav xl:hidden pb-10">
           <div className="flex relative w-full justify-between">
-            {skillCategory.map((key,idx) => (
+            {skillCategory.map((key, idx) => (
               <div key={key} className="cursor-pointer w-1/7 h-10 flex items-center justify-center" onClick={() => setIndex(idx)}>
                 <h3 className={`sm:text-lg text-sm font-light ${index === idx ? "text-[var(--primary-color)]" : ""}`}>{key}</h3>
               </div>
             ))}
             <div className="absolute bottom-0 left-0 w-full h-[2px] bg-[var(--sub-font-color)]" />
             <div className={`absolute bottom-0 left-0 h-[2px] bg-[var(--primary-color)] transition-all duration-400 ease-out`}
-            style={{transform: `translateX(${index * 100}%)`, width: `calc(1/${skillCategoryLength} * 100%)`}}
+              style={{ transform: `translateX(${index * 100}%)`, width: `calc(1/${skillCategoryLength} * 100%)` }}
             />
           </div>
         </div>
         <div className="flex flex-col gap-5 xl:w-6/7 w-full">
           <div className="border-b pb-5">
             <span className="text-[var(--sub-font-color)]">skill stack</span>
-            <h3 className="text-2xl font-bold">{ skillCategory[index]}</h3>
+            <h3 className="text-2xl font-bold">{skillCategory[index]}</h3>
           </div>
           <div >
-            <div className="flex flex-col gap-5 pl-2 pt-5">
-              {skills[skillCategory[index] as keyof typeof skills]&&skills[skillCategory[index] as keyof typeof skills].map((skill) => (
-                <SkillContent key={skill.title} title={skill.title} text={skill.text} icon={skill.icon} />
+            <div key={index} className="flex flex-col gap-5 pl-2 pt-5">
+              {skills[skillCategory[index] as keyof typeof skills] && skills[skillCategory[index] as keyof typeof skills].map((skill, i) => (
+                <div
+                  key={skill.title}
+                  className="animate-fade-in-up"
+                  style={{ animationDelay: `${i * 0.1}s` }}
+                >
+                  <SkillContent title={skill.title} text={skill.text} icon={skill.icon} />
+                </div>
               ))}
             </div>
             {index === 0 && <SkillOverView />}
