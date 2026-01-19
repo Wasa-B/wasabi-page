@@ -25,7 +25,7 @@ const About = () => {
           }
         </div>
         <div className="xl:w-2/5 sm:w-[540px] w-full h-[500px] rounded-lg border border-neutral-400 overflow-hidden">
-          <img src="images/profile_img.png" alt="profile_img" className="w-full h-full" />
+          <img src="images/profile_img.png" alt="profile_img" className="w-full h-full object-cover" />
         </div>
       </div>
     </div>
